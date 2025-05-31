@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class StudentAppApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(StudentAppApplication.class, args);
+        SpringApplication.run(StudentAppApplication.class, args);//lapp spring demmare et vas scanner les classe et tout
     }
 
 }
