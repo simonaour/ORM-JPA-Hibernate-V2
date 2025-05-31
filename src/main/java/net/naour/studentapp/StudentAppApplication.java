@@ -18,6 +18,7 @@ public class StudentAppApplication implements CommandLineRunner {
         SpringApplication.run(StudentAppApplication.class, args);//lapp spring demmare et vas scanner les classe et tout
     }
 
+
     @Override
     public void run(String... args) throws Exception {
         productRepository.save(new Product(null , "Computer" , 4300 , 4));
@@ -34,9 +35,16 @@ public class StudentAppApplication implements CommandLineRunner {
         System.out.println((product.getName()));
         System.out.println((product.getQuantity()));
         System.out.println((product.getPrice()));
+        System.out.println("ùùùùùùùùùùùùùùùùùùùùùù");
         List<Product> productList = productRepository.findByNameContains("C");
         productList.forEach(p->{
-            System.out.println(p.toString());
+            System.out.println(p);
         }) ;
+        System.out.println("ùùùùùùùùùùùùùùùùùùùùùù");
+        List<Product> productList2 = productRepository.findByNameContains("C");
+        productList2.forEach(p->{
+            System.out.println(p);
+        }) ;
+
     }
 }
